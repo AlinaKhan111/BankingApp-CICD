@@ -1,0 +1,45 @@
+trigger:
+  branches:
+    include:
+      - master
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJob
+    pool:
+      name: Default
+    steps:
+    - task: Maven@4
+      inputs:
+        mavenPomFile: 'Wallet/pom.xml'
+        mavenOptions: '-Xmx3072m'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.11'
+        jdkArchitectureOption: 'x64'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        goals: 'package'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(System.DefaultWorkingDirectory)/Wallet/target'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+
+- stage: Deploy
+  dependsOn: Build
+  jobs:
+  - job: DeployJob
+    pool:
+      name: Default
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        artifactName: 'drop'
+        targetPath: '$(Pipeline.Workspace)/drop'
+    - task: AzureWebApp@1
+      inputs:
+        azureSubscription: 'AzureAppServiceConnection'
+        appName: 'app-wallet-cwu'
+        package: '$(Pipeline.Workspace)/drop/Wallet-0.0.1-SNAPSHOT.jar'
+        appType: 'webAppLinux'
