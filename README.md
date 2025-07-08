@@ -3,8 +3,8 @@
 # URLs (for submission)
 
 
-* **Azure Web App (Live URL)**: [Link Text](https://app-wallet-cwu-b3cyamc4dsdnb7d9.southeastasia-01.azurewebsites.net)
-                                [Link Text](https://app-wallet-cwu-b3cyamc4dsdnb7d9.southeastasia-01.azurewebsites.net/swagger-ui.html)
+* **Azure Web App (Live URL)**: [Click to Visit](https://app-wallet-cwu-b3cyamc4dsdnb7d9.southeastasia-01.azurewebsites.net)
+                                [Click to Visit](https://app-wallet-cwu-b3cyamc4dsdnb7d9.southeastasia-01.azurewebsites.net/swagger-ui.html)
 
                                 
 
