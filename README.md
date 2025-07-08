@@ -108,7 +108,11 @@ spring.h2.console.path=/h2-console
 * JDBC URL: `jdbc:h2:mem:testdb`
 * User: `sa`, Password: *(empty)*
 
-*(Screenshots are assumed to be attached with the report.)*
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e6309ae6-4307-4524-bd52-9a129f734d73" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/fef8e3ba-b177-4af2-a7c6-efc76039ea5f" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/60ff8af2-dabb-4388-8197-dd0ace7cf7d3" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/71c5e6cb-6bca-446c-91c6-0471c76d055f" />
+<img width="1918" height="875" alt="Image" src="https://github.com/user-attachments/assets/dcc2414b-6a5d-42b8-821a-dda530e25be7" />
 
 
 
@@ -123,9 +127,12 @@ spring.h2.console.path=/h2-console
 3. **Publish Artifact** – Uploads the `.jar` file as an artifact.
 4. **Deploy to Azure App Service** – Uses the `AzureWebApp` task to deploy the `.jar` to the configured Azure Web App.
 
-- Pipeline is triggered automatically on push to `main` branch.
+- Pipeline is triggered automatically on push to `master` branch.
 
 - To avoid delays in execution due to free-tier limitations (parallelism restrictions), a **self-hosted agent** was used to reliably run the pipeline without waiting in the hosted queue.
+
+<img width="1916" height="871" alt="Image" src="https://github.com/user-attachments/assets/7b8bdbe1-73df-4649-aae7-d5d9b7bccce6" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/294a5332-5d54-4eea-b9cb-11db3b35cc36" />
 
 
 # Azure Deployment and Limitations
@@ -144,6 +151,8 @@ spring.h2.console.path=/h2-console
 * Updated DB settings to in-memory.
 * Verified app startup logs using Azure Log Stream.
 * Ensured Swagger loads correctly by confirming proper deployment path and port usage.
+
+<img width="1241" height="396" alt="Image" src="https://github.com/user-attachments/assets/0e8b20b1-8e3a-4772-b574-eaa1919f51e0" />
 
 # Conclusion and Suggestions
 
