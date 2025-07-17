@@ -5,7 +5,9 @@
 
 * **Azure Web App (Live URL)**: [Click to Visit](https://app-wallet-cwu-b3cyamc4dsdnb7d9.southeastasia-01.azurewebsites.net)
                                 [Click to Visit](https://app-wallet-cwu-b3cyamc4dsdnb7d9.southeastasia-01.azurewebsites.net/swagger-ui.html)
-⚠️ **Note:**  
+
+
+  ⚠️ **Note:**  
 This project was originally deployed on **Azure Web App** using an **Azure for Students subscription**. However, the subscription has expired, and the web app (`app-wallet-cwu`) is no longer accessible. All deployment configurations and CI/CD pipelines are still available in this repository for reference.  
 
 
